@@ -1,0 +1,34 @@
+﻿<Window x:Class="Adhoc_Network.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Adhoc Network" Height="321" Width="371.447">
+    <Grid Margin="0,0,1.553,0">
+        <TextBlock HorizontalAlignment="Center" Margin="9.776,13.733,230.671,238.266" TextWrapping="Wrap" Text="Welcome !" VerticalAlignment="Center" FontSize="16" Foreground="#FFFB0606" Width="77"/>
+        <GroupBox Visibility="Hidden"  x:Name="createAdhocNetwork" Header="Create Adhoc Network" Margin="1.117,88.175,0.223,57.02" Height="127.805" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="326.66" Margin="0,0,-1.66,0">
+                <TextBlock HorizontalAlignment="Left" Margin="4.493,10,0,0" TextWrapping="Wrap" Text="Network Name (SSID)" VerticalAlignment="Top" FontSize="14"/>
+                <TextBox x:Name="ssidTextBox" HorizontalAlignment="Left" Height="23" Margin="144.493,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162.061" FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" Margin="48.493,38,0,0" TextWrapping="Wrap" Text="Password (key)" VerticalAlignment="Top" FontSize="14"/>
+                <TextBox x:Name="passwordTextBox" HorizontalAlignment="Left" Height="23" Margin="145.493,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161.061" FontSize="14"/>
+                <Button x:Name="createNetwork" Content="Create" HorizontalAlignment="Center" Margin="10,64,0,0" VerticalAlignment="Center" Width="75" Click="createNetwork_Click" FontSize="14"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Visibility="Visible" x:Name="adhocNetworkDetails" Header="Adhoc Network Details" HorizontalAlignment="Center" Margin="-0.224,0,0,0" VerticalAlignment="Center" Height="146.805" Width="326.881" FontSize="16">
+            <Grid HorizontalAlignment="Left" Height="117.805" Margin="0,0,-1.777,-17.805" VerticalAlignment="Top" Width="328.777">
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Network Name (SSID)   :" VerticalAlignment="Top" FontSize="14" Width="154.226" TextAlignment="Right"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,54.02,0,0" TextWrapping="Wrap" Text="Status   :" VerticalAlignment="Top" FontSize="14" Width="154.226" Height="19" TextAlignment="Right"/>
+                <TextBlock x:Name="networkStatusTextBlock" HorizontalAlignment="Left" Margin="169.226,54.02,0,0" TextWrapping="Wrap" Text="Running" VerticalAlignment="Top" FontSize="14" Width="129"/>
+                <Button x:Name="startAdhocNetworkButton" Content="Start" HorizontalAlignment="Left" Margin="66,82.2,0,0" VerticalAlignment="Top" Width="75" Click="startAdhocNetworkButton_Click" FontSize="14"/>
+                <Button Visibility="Hidden"  x:Name="stopAdhocNetworkButton" Content="Stop" HorizontalAlignment="Center" Margin="0,82.2,0,0" VerticalAlignment="Top" Width="75" Click="stopAdhocNetworkButton_Click" FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,33.06,0,0" TextWrapping="Wrap" Text="Password (Key)   :" VerticalAlignment="Top" FontSize="14" Width="154.226" TextAlignment="Right"/>
+                <TextBlock x:Name="passwordTextBlock" HorizontalAlignment="Left" Margin="169.226,33.06,0,0" TextWrapping="Wrap" Text="Usama" VerticalAlignment="Top" FontSize="14" Width="129"/>
+                <TextBlock x:Name="ssidTextBlock" HorizontalAlignment="Left" Margin="169.226,10,0,0" TextWrapping="Wrap" Text="Usama" VerticalAlignment="Top" FontSize="14" Width="129"/>
+                <Button x:Name="changeDetailsButton" Content="Change Details" HorizontalAlignment="Left" Margin="169.226,82.2,0,0" VerticalAlignment="Top" Width="109.197" Click="changeDetailsButton_Click" FontSize="14"/>
+            </Grid>
+        </GroupBox>
+        <TextBlock x:Name="userNameTextBlock" Margin="101.12,13.733,35.645,238.266" TextWrapping="Wrap" Text="Usama" FontSize="16" Foreground="#FF0F6EF7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="180.682"/>
+        <TextBlock Margin="31.553,38.098,37.119,209.902" TextWrapping="Wrap" Text="Create your adhoc network in just one click" FontSize="14" Foreground="#FF0089FB" Width="292.775" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" TextAlignment="Center"/>
+
+
+    </Grid>
+</Window>
